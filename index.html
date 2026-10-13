@@ -93,6 +93,56 @@
       0%, 100% { opacity: 1; }
       50% { opacity: .3; }
     }
+    .section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .85rem;
+      color: var(--accent2);
+      margin-bottom: 14px;
+    }
+    .project {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      transition: border-color .15s, transform .15s;
+    }
+    .project:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .project img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: top;
+      background: #0d1117;
+      border-bottom: 1px solid var(--border);
+    }
+    .project-body { padding: 18px 20px 20px; }
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .project h2 { font-size: 1.15rem; font-weight: 800; }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .72rem;
+      color: #0d1117;
+      background: var(--accent2);
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+    .project p { color: var(--muted); line-height: 1.6; font-size: .95rem; margin-bottom: 12px; }
+    .project .meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      color: var(--accent);
+    }
     .links { display: flex; flex-wrap: wrap; gap: 12px; }
     .links a {
       text-decoration: none;
@@ -132,10 +182,22 @@
       <li>Nginx</li>
     </ul>
 
-    <div class="status">
-      <span class="dot"></span>
-      Portfolio en construcción. Pronto, proyectos por aquí.
-    </div>
+    <p class="section-title">// proyectos</p>
+    <a class="project" href="https://cuidadosolucionessl.com" target="_blank" rel="noopener">
+      <img src="img/cuidadosoluciones.png" alt="Página de inicio de la web de Cuidad@Soluciones">
+      <div class="project-body">
+        <div class="project-top">
+          <h2>Cuidad@Soluciones</h2>
+          <span class="badge">Cliente real</span>
+        </div>
+        <p>
+          Rediseño completo de la web de una empresa de cuidados a domicilio y en hospital en Zaragoza.
+          Diseño, maquetación multipágina responsive sin frameworks, carrusel de servicios,
+          formulario de contacto y publicación con dominio propio y HTTPS.
+        </p>
+        <span class="meta">HTML · CSS · JavaScript · Netlify → cuidadosolucionessl.com</span>
+      </div>
+    </a>
 
     <div class="links">
       <a class="primary" href="https://github.com/Davidguti98" target="_blank" rel="noopener">Ver mi GitHub</a>
