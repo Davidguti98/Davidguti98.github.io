@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Gutiérrez | Desarrollador Web</title>
+  <meta name="description" content="Portfolio de David Gutiérrez, estudiante de 2º DAW. Desarrollo web front-end y back-end.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --border: #30363d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background-image: radial-gradient(circle at 20% 20%, rgba(88,166,255,.12), transparent 40%),
+                        radial-gradient(circle at 80% 80%, rgba(63,185,80,.10), transparent 40%);
+    }
+    main {
+      max-width: 640px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 40px;
+    }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .85rem;
+      color: var(--accent2);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    h1 span { color: var(--accent); }
+    .sub {
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .stack li {
+      list-style: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .8rem;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: .95rem;
+      margin-bottom: 32px;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #d29922;
+      flex-shrink: 0;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .3; }
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .links a {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: transform .15s, background .15s;
+    }
+    .links a:hover { transform: translateY(-2px); }
+    .primary { background: var(--accent); color: #0d1117; }
+    .secondary { border: 1px solid var(--border); color: var(--text); }
+    .secondary:hover { background: #21262d; }
+    @media (max-width: 480px) {
+      main { padding: 32px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="tag">// hola, mundo</p>
+    <h1>Soy <span>David Gutiérrez</span>,<br>desarrollador web.</h1>
+    <p class="sub">
+      Estudiante de 2º de DAW en Zaragoza. Desarrollo web front-end y back-end.
+      Buscando prácticas para marzo de 2027.
+    </p>
+
+    <ul class="stack">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>PHP</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Git</li>
+      <li>Linux</li>
+      <li>Nginx</li>
+    </ul>
+
+    <div class="status">
+      <span class="dot"></span>
+      Portfolio en construcción. Pronto, proyectos por aquí.
+    </div>
+
+    <div class="links">
+      <a class="primary" href="https://github.com/Davidguti98" target="_blank" rel="noopener">Ver mi GitHub</a>
+      <a class="secondary" href="mailto:d.gutierrezbronte@gmail.com">Contacto</a>
+    </div>
+  </main>
+</body>
+</html>
